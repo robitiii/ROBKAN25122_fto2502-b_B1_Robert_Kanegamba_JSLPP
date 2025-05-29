@@ -38,3 +38,22 @@ export const handleTaskSubmit = (event, taskList, setTaskList) => {
   taskForm.reset();
   setTaskList(taskList);
 };
+/**
+ * Handle deleting a task
+ * @param {Array} taskList
+ * @param {Function} setTaskList
+ */
+export const handleTaskDelete = (taskList, setTaskList) => {
+  const editingId = taskSubmitBtn.dataset.editingId;
+  if (!editingId) return;
+
+  const confirmDelete = confirm("Are you sure you want to delete this task?");
+  if (!confirmDelete) return;
+
+  const updatedList = taskList.filter((task) => task.id != editingId);
+  saveTasks(updatedList);
+  renderTasks(updatedList);
+  closeDialog();
+  taskForm.reset();
+  setTaskList(updatedList);
+};
