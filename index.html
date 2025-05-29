@@ -77,6 +77,7 @@
         </main>
       </div>
     </div>
+
     <!-- Task Dialog -->
     <dialog id="task-dialog" class="task-dialog">
       <div class="dialog-content">
@@ -121,18 +122,21 @@
               <option value="todo">Todo</option>
               <option value="doing">Doing</option>
               <option value="done">Done</option>
-              <span class="custom-arrow">&gt;</span>
             </select>
           </div>
 
-          <button type="submit" class="create-task-btn" id="task-submit-btn">
-            Create Task
-          </button>
+          <div class="btn-position">
+            <button type="submit" class="create-task-btn" id="task-submit-btn">
+              Save Task
+            </button>
+            <button type="button" class="delete-task-btn" id="task-delete-btn">
+              Delete Task
+            </button>
           </div>
-
         </form>
       </div>
     </dialog>
+
     <script src="scripts/main.js" type="module"></script>
   </body>
 </html>
