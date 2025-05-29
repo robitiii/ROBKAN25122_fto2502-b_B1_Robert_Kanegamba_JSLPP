@@ -6,6 +6,7 @@ import {
   taskForm,
   taskSubmitBtn,
   taskDialog,
+  taskDeleteBtn,
 } from "./dom/elements.js";
 import { openDialog, closeDialog } from "./dom/dialogHandlers.js";
 import { validateForm, validateField } from "./tasks/validateForm.js";
@@ -50,6 +51,21 @@ const initApp = async () => {
     ) {
       closeDialog();
     }
+  });
+  taskDeleteBtn.addEventListener("click", () => {
+    const taskIdToDelete = taskSubmitBtn.dataset.editingId;
+    if (!taskIdToDelete) return;
+
+    const confirmed = confirm("Are you sure you want to delete this task?");
+    if (!confirmed) return;
+
+    const updatedTasks = taskList.filter(
+      (task) => task.id !== Number(taskIdToDelete) //filter comparison from dataset to numeric
+    );
+    setTaskList(updatedTasks);
+    saveTasks(updatedTasks);
+    renderTasks(updatedTasks);
+    closeDialog();
   });
 };
 
