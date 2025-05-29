@@ -7,7 +7,6 @@ export const fetchInitialTasks = async () => {
     const response = await fetch("https://jsl-kanban-api.vercel.app/");
     const data = await response.json();
 
-    // Optional: Clean or reformat if needed (e.g., strip ID or map fields)
     return data.map((task) => ({
       id: task.id, // Keep ID if you want to use it
       title: task.title,
