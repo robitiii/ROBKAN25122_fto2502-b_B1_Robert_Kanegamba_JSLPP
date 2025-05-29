@@ -96,6 +96,27 @@ const initApp = async () => {
     layout.classList.remove("full-width-layout");
     showSidebarBtn.classList.remove("visible");
   });
+  // Sidebar mobile open/close logic
+  const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+  const mobileCloseBtn = document.getElementById("mobile-close-btn");
+  const overlay = document.getElementById("overlay");
+
+  if (mobileMenuBtn && sidebar) {
+    mobileMenuBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("mobile-sidebar-active");
+      overlay.style.display = sidebar.classList.contains(
+        "mobile-sidebar-active"
+      )
+        ? "block"
+        : "none";
+    });
+  }
+  if (mobileCloseBtn && sidebar) {
+    mobileCloseBtn.addEventListener("click", () => {
+      sidebar.classList.remove("mobile-sidebar-active");
+      overlay.style.display = "none";
+    });
+  }
 };
 
 document.addEventListener("DOMContentLoaded", initApp);
