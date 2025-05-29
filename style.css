@@ -72,6 +72,23 @@ body {
 #show-sidebar-btn.visible {
   display: block;
 }
+.hidden-sidebar {
+  display: none;
+}
+/* Expand layout when sidebar is hidden */
+.full-width-layout {
+  width: 100%;
+  margin-left: 0;
+}
+/* Main Layout */
+.layout {
+  flex: 1;
+  margin-left: 300px;
+  width: calc(100% - 300px);
+}
+#layout {
+  transition: all 0.3s ease;
+}
 /* Sidebar Styles */
 .side-bar {
   width: 300px;
