@@ -23,3 +23,14 @@ export const fetchInitialTasks = async () => {
 export const saveTasks = (tasklist) => {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(tasklist));
 };
+// Function to get tasks from localStorage or fallback to API fetch
+export const loadTasks = async () => {
+  const stored = localStorage.getItem(STORAGE_KEY);
+  if (stored) {
+    return JSON.parse(stored);
+  } else {
+    const fetchedTasks = await fetchInitialTasks();
+    saveTasks(fetchedTasks);
+    return fetchedTasks;
+  }
+};
