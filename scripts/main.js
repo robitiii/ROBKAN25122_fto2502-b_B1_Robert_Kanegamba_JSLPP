@@ -1,5 +1,6 @@
 // js/main.js
 import { loadTasks, saveTasks } from "./data/initialData.js";
+to;
 import {
   addTaskBtn,
   closeDialogBtn,
@@ -12,6 +13,12 @@ import { openDialog, closeDialog } from "./dom/dialogHandlers.js";
 import { validateForm, validateField } from "./tasks/validateForm.js";
 import { renderTasks } from "./tasks/renderTasks.js";
 import { handleTaskSubmit } from "./tasks/taskForm.js";
+
+// Query the collapse button and sidebar elements
+const showSidbarBtn = document.getElementById("show-side-btn");
+const collapseSidebarBtn = document.getElementById("collapse-sidebar-btn");
+const sidebar = document.getElementById("side-bar-div");
+const layout = document.getElementById("layout");
 
 let taskList = [];
 
@@ -67,6 +74,27 @@ const initApp = async () => {
     saveTasks(updatedTasks);
     renderTasks(updatedTasks);
     closeDialog();
+  });
+
+  if (collapseSidebarBtn) {
+    collapseSidebarBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("hidden-sidebar");
+      layout.classList.toggle("full-width-layout");
+    });
+  }
+
+  const showSidebarBtn = document.getElementById("show-sidebar-btn");
+
+  collapseSidebarBtn.addEventListener("click", () => {
+    sidebar.classList.add("hidden-sidebar");
+    layout.classList.add("full-width-layout");
+    showSidebarBtn.classList.add("visible");
+  });
+
+  showSidebarBtn.addEventListener("click", () => {
+    sidebar.classList.remove("hidden-sidebar");
+    layout.classList.remove("full-width-layout");
+    showSidebarBtn.classList.remove("visible");
   });
 };
 

@@ -68,7 +68,8 @@ body {
   padding: 0.25rem 0.5rem;
   background-color: #a8a4ff;
   border: none;
-  border-radius: 6px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
   cursor: pointer;
   z-index: 1000;
   display: none; /* Hidden by default */
