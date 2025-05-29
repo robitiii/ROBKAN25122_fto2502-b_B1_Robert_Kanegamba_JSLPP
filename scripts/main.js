@@ -1,5 +1,5 @@
 // js/main.js
-import { loadTasks } from "./data/initialData.js";
+import { loadTasks, saveTasks } from "./data/initialData.js";
 import {
   addTaskBtn,
   closeDialogBtn,
@@ -52,6 +52,7 @@ const initApp = async () => {
       closeDialog();
     }
   });
+  //Delete logic
   taskDeleteBtn.addEventListener("click", () => {
     const taskIdToDelete = taskSubmitBtn.dataset.editingId;
     if (!taskIdToDelete) return;
