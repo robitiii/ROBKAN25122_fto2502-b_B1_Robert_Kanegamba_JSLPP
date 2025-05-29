@@ -13,6 +13,11 @@ body {
   display: flex;
   min-height: 100vh;
 }
+/* Column Layout */
+.container {
+  padding: 1.5rem;
+  overflow-x: auto;
+}
 
 /* Only apply transitions to specific color properties */
 .side-bar {
@@ -523,6 +528,11 @@ body {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+  .layout {
+    margin-left: 0 !important;
+    width: 100% !important;
+    margin-top: 56px !important; /* height of mobile navbar */
+  }
   .side-bar {
     display: none;
   }
