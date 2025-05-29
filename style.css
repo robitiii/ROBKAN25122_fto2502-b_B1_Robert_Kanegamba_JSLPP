@@ -55,6 +55,23 @@ body {
 .create-task-btn:hover {
   background-color: #a8a4ff;
 }
+.show-sidebar-btn {
+  position: fixed;
+  top: 800px;
+  left: 0.5rem;
+  font-size: 1.5rem;
+  padding: 0.25rem 0.5rem;
+  background-color: #a8a4ff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1000;
+  display: none; /* Hidden by default */
+}
+.hidden-sidebar + #show-sidebar-btn,
+#show-sidebar-btn.visible {
+  display: block;
+}
 /* Sidebar Styles */
 .side-bar {
   width: 300px;
