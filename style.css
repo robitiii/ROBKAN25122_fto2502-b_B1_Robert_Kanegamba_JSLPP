@@ -530,6 +530,9 @@ body {
   .card-column-main {
     grid-template-columns: repeat(2, minmax(250px, 1fr));
   }
+  .header-board-name {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
