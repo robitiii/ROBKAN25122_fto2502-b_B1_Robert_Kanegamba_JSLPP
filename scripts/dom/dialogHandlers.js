@@ -3,6 +3,7 @@ import {
   taskDialog,
   taskForm,
   taskSubmitBtn,
+  taskDeleteBtn,
 } from "./elements.js";
 
 export function openDialog() {
@@ -15,6 +16,7 @@ export function openDialog() {
     .querySelectorAll(".form-group")
     .forEach((g) => g.classList.remove("error"));
   delete taskSubmitBtn.dataset.editingId;
+  taskDeleteBtn.style.display = "none"; //Hide delete button on new task.
 }
 export function closeDialog() {
   taskDialog.close();
@@ -23,6 +25,7 @@ export function closeDialog() {
     .querySelectorAll(".form-group")
     .forEach((g) => g.classList.remove("error"));
   delete taskSubmitBtn.dataset.editingId;
+  taskDeleteBtn.style.display = "none"; //Hide delete button on close.
 }
 export function viewTaskDetails(task) {
   dialogTitle.textContent = "Edit Task";
@@ -33,6 +36,7 @@ export function viewTaskDetails(task) {
   taskSubmitBtn.dataset.editingId = task.id;
   enableFormEditing();
   taskDialog.showModal();
+  taskDeleteBtn.style.display = "inline-block"; //Show delete button on edit
 }
 
 export function enableFormEditing() {
