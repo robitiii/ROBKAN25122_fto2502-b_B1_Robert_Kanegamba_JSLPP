@@ -813,9 +813,11 @@ body.dark-mode{
   color: #fff;
 }
 .theme-toggle{
-  padding:.5rem .5rem;
-  display:block;
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  padding: .5rem .5rem;
   width:250px;
   margin-bottom:2.5rem !important;
   background-color: #e4ebfa;
