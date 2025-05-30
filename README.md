@@ -52,7 +52,7 @@ A modern, responsive Kanban board built with vanilla JavaScript, HTML, and CSS. 
 
 ## 🔗 Project Links
 
-- 🔍 **Code Overview & Explanation**: [adding soon](#)
+- 🔍 **Code Overview & Explanation**: [adding soon](https://www.veed.io/edit/db16d362-b6ee-45e0-9694-6d9c0afce2c2)
 - 🌐 **Live Deployed App (Vercel)**: [vercel app ](https://robkan-25122-fto2502-b-b1-robert-ka.vercel.app/)
 
 ---
