@@ -110,6 +110,30 @@ const initApp = async () => {
       overlay.style.display = "none";
     });
   }
+  // Theme toggle logic
+  const themeToggleSwitch = document.getElementById("theme-toggle");
+
+  function setTheme(isDark) {
+    document.body.classList.toggle("dark-mode", isDark);
+    const modals = document.querySelectorAll(".modal, .task-dialog");
+    modals.forEach(modal => modal.classList.toggle("dark-mode", isDark));
+    localStorage.setItem('isDarkMode', isDark);
+  }
+
+  // Apply saved theme preference on load
+  const savedThemePreference = localStorage.getItem('isDarkMode');
+  if (savedThemePreference !== null) {
+    const isDark = JSON.parse(savedThemePreference);
+    setTheme(isDark);
+    themeToggleSwitch.checked = isDark;
+  }
+
+  if (themeToggleSwitch) {
+    themeToggleSwitch.addEventListener("change", () => {
+      const isDark = themeToggleSwitch.checked;
+      setTheme(isDark);
+    });
+  }
 };
 
 document.addEventListener("DOMContentLoaded", initApp);
