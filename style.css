@@ -704,6 +704,16 @@ body {
   #side-logo-div{
     display:none;
   }
+  .theme-toggle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.5rem;
+    margin-bottom: .5rem;
+    padding: .5rem .5rem;
+    width: calc(100% - 1.5rem);
+    background-color: #e4ebfa;
+  }
 }
 
 @media (max-width: 480px) {
@@ -816,14 +826,20 @@ body.dark-mode{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
+  margin-left:1.5rem;
   padding: .5rem .5rem;
   width:250px;
-  margin-bottom:2.5rem !important;
   background-color: #e4ebfa;
 }
+.dark-mode .slider {
+  background-color: #fff;
+}
+input:checked + .dark-mode .slider {
+  background-color: #fff;
+}
 .dark-mode .theme-toggle {
-  background-color: #4e4f5e;
+  background-color: #635fc7;
 }
 .dark-mode .side-bar {
   background-color: #3e3f4e;
@@ -837,4 +853,35 @@ body.dark-mode{
 .dark-mode .task-div {
   background-color: #3e3f4e;
   color: #fff;
+}
+.dark-mode .form-group input,
+.dark-mode .form-group textarea,
+.dark-mode .form-group select {
+  background-color: #fff;
+  border-color: #4e4f5e;
+  color: #000;
+}
+.dark-mode .create-task-btn {
+  background-color: #a8a4ff;
+}
+.dark-mode #add-task-btn,
+.dark-mode .create-task-btn {
+  background-color: #635fc7;
+  color:#fff;
+}
+.dark-mode #add-task-btn:hover,
+.dark-mode .create-task-btn:hover {
+  background-color: #635fc7;
+  color:#fff;
+}
+.dark-mode .board-btn.active {
+  color:#fff;
+  background-color: #635fc7;
+}
+.dark-mode .collapse-btn {
+  background-color: #635fc7;
+  color:#fff;
+}
+.dark-mode .mobile-sidebar-active{
+  background-color: #4e4f5e;
 }
