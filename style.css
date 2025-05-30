@@ -630,9 +630,10 @@ body {
     background: #fff; /* Add background color to overlay */
   }
   .side-bar.mobile-sidebar-active {
+    position:absolute;
     display: block;
-    margin-top:3.9rem;
-    margin-left:3.5rem;
+    margin: 6rem 0;
+    margin-left:1rem;
     padding:2rem 2rem;
     width:50%;
     height:30vh;
@@ -641,6 +642,8 @@ body {
     z-index: 2000; /* Ensure it appears above the overlay */
   }
   .mobile-sidebar-active{
+    display:block;
+    margin: auto 0;
     background-color:#fff;
   }
   .sticky-header{
