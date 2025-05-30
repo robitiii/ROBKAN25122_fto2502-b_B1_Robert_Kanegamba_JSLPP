@@ -29,8 +29,17 @@ export const loadTasks = async () => {
   if (stored) {
     return JSON.parse(stored);
   } else {
-    const fetchedTasks = await fetchInitialTasks();
-    saveTasks(fetchedTasks);
-    return fetchedTasks;
+    try {
+      const response = await fetch('https://jsl-kanban-api.vercel.app/');
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const fetchedTasks = await response.json();
+      saveTasks(fetchedTasks);
+      return fetchedTasks;
+    } catch (error) {
+      console.error('Error fetching tasks from API:', error);
+      throw error;
+    }
   }
 };
