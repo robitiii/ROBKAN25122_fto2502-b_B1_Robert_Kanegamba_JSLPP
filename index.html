@@ -20,6 +20,7 @@
 
   <body>
     <!-- Navigation Sidebar: Contains the logo, navigation links for boards -->
+    <div class="overlay" id="overlay"></div>
     <nav class="side-bar" id="side-bar-div">
       <div id="side-logo-div">
         <img id="logo" src="./assets/logo-light.svg" alt="logo-light" />
@@ -29,6 +30,15 @@
         <h4 id="headline-sidepanel">ALL BOARDS (1)</h4>
         <button type="button" class="board-btn active">Launch Career</button>
       </div>
+      <button type="button" id="collapse-sidebar-btn" class="collapse-btn">
+        <span
+          ><img
+            class="hide-sidebar-img"
+            src="assets/icon-hide-sidebar.svg"
+            alt="icon-hide-sidebar"
+        /></span>
+        Hide Sidebar
+      </button>
     </nav>
     <button type="button" class="show-sidebar-btn" id="show-sidebar-btn">
       <img src="./assets/icon-show-sidebar.svg" alt="favicon" />

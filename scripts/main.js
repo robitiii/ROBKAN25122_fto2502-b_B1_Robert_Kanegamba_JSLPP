@@ -1,6 +1,5 @@
 // js/main.js
 import { loadTasks, saveTasks } from "./data/initialData.js";
-to;
 import {
   addTaskBtn,
   closeDialogBtn,
@@ -15,8 +14,8 @@ import { renderTasks } from "./tasks/renderTasks.js";
 import { handleTaskSubmit } from "./tasks/taskForm.js";
 
 // Query the collapse button and sidebar elements
-const showSidbarBtn = document.getElementById("show-side-btn");
 const collapseSidebarBtn = document.getElementById("collapse-sidebar-btn");
+const showSidebarBtn = document.getElementById("show-sidebar-btn");
 const sidebar = document.getElementById("side-bar-div");
 const layout = document.getElementById("layout");
 
@@ -75,27 +74,40 @@ const initApp = async () => {
     renderTasks(updatedTasks);
     closeDialog();
   });
+  //sidebar logic
+  //   if (collapseSidebarBtn) {
+  //     collapseSidebarBtn.addEventListener("click", () => {
+  //       sidebar.classList.toggle("hidden-sidebar");
+  //       layout.classList.toggle("full-width-layout");
+  //     });
+  //   }
 
-  if (collapseSidebarBtn) {
+  //   const showSidebarBtn = document.getElementById("show-sidebar-btn");
+
+  //   collapseSidebarBtn.addEventListener("click", () => {
+  //     sidebar.classList.add("hidden-sidebar");
+  //     layout.classList.add("full-width-layout");
+  //     showSidebarBtn.classList.add("visible");
+  //   });
+
+  //   showSidebarBtn.addEventListener("click", () => {
+  //     sidebar.classList.remove("hidden-sidebar");
+  //     layout.classList.remove("full-width-layout");
+  //     showSidebarBtn.classList.remove("visible");
+  //   });
+  if (collapseSidebarBtn && showSidebarBtn && sidebar && layout) {
     collapseSidebarBtn.addEventListener("click", () => {
-      sidebar.classList.toggle("hidden-sidebar");
-      layout.classList.toggle("full-width-layout");
+      sidebar.classList.add("side-bar-div");
+      layout.classList.add("full-width-layout");
+      showSidebarBtn.classList.add("visible");
+    });
+
+    showSidebarBtn.addEventListener("click", () => {
+      sidebar.classList.remove("side-bar-div");
+      layout.classList.remove("full-width-layout");
+      showSidebarBtn.classList.remove("visible");
     });
   }
-
-  const showSidebarBtn = document.getElementById("show-sidebar-btn");
-
-  collapseSidebarBtn.addEventListener("click", () => {
-    sidebar.classList.add("hidden-sidebar");
-    layout.classList.add("full-width-layout");
-    showSidebarBtn.classList.add("visible");
-  });
-
-  showSidebarBtn.addEventListener("click", () => {
-    sidebar.classList.remove("hidden-sidebar");
-    layout.classList.remove("full-width-layout");
-    showSidebarBtn.classList.remove("visible");
-  });
   // Sidebar mobile open/close logic
   const mobileMenuBtn = document.getElementById("mobile-menu-btn");
   const mobileCloseBtn = document.getElementById("mobile-close-btn");
