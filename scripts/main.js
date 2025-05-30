@@ -97,13 +97,13 @@ const initApp = async () => {
   //   });
   if (collapseSidebarBtn && showSidebarBtn && sidebar && layout) {
     collapseSidebarBtn.addEventListener("click", () => {
-      sidebar.classList.add("side-bar-div");
+      sidebar.classList.add("hidden-sidebar");
       layout.classList.add("full-width-layout");
       showSidebarBtn.classList.add("visible");
     });
 
     showSidebarBtn.addEventListener("click", () => {
-      sidebar.classList.remove("side-bar-div");
+      sidebar.classList.remove("hidden-sidebar");
       layout.classList.remove("full-width-layout");
       showSidebarBtn.classList.remove("visible");
     });

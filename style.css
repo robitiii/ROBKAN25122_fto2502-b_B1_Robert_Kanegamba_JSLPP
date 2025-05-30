@@ -698,3 +698,20 @@ body {
     margin-bottom: 1rem;
   }
 }
+
+#side-bar-div.hidden-sidebar {
+  display: none;
+}
+
+#layout.full-width-layout {
+  width: 100%;
+  margin-left: 0;
+}
+
+.show-sidebar-btn {
+  display: none;
+}
+
+.show-sidebar-btn.visible {
+  display: block;
+}
