@@ -587,9 +587,6 @@ body {
   .side-bar {
     display: none;
   }
-  .sidebar-overlay {
-    display: none !important;
-  }
   #layout {
     margin-left: 0;
     width: 100%;
@@ -615,7 +612,7 @@ body {
     min-width: 0;
   }
   .sidebar-overlay {
-    display: none;
+    display: none !important;
     position: fixed;
     top: 0;
     left: 0;
@@ -630,6 +627,21 @@ body {
     display: block;
     opacity: 1;
   }
+  .side-bar.mobile-sidebar-active {
+    display: block;
+    margin-top:3rem;
+    margin-left:3rem;
+    padding:2rem 2rem;
+    width:50vw;
+    height:40vh;
+    border-radius:20px;
+    background-color:#fff;
+  }
+  .mobile-sidebar-active{
+    display:block;
+    background-color:#fff;
+  }
+  .mobile-sidebar-active
   .sticky-header {
     padding: 1rem;
   }
@@ -642,7 +654,7 @@ body {
     width:32px;
     height:32px;
   }
-  .favicon-mobile-img img{
+  .mobile-menu-btn img{
     display:block;
     width:32px;
     height:32px;
@@ -669,6 +681,9 @@ body {
   }
   .header-board-name {
     display: none;
+  }
+  #side-logo-div{
+    display:none;
   }
 }
 
