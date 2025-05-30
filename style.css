@@ -31,7 +31,16 @@ body {
   border-bottom-color: #e4ebfa;
   transition: background-color 0.15s ease, border-color 0.15s ease;
 }
-
+.mobile-menu-btn{
+  display:none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.mobile-menu-btn img{
+  display:none;
+}
 .task-div {
   background-color: #fff;
   transition: background-color 0.15s ease, transform 0.2s ease;
@@ -627,6 +636,16 @@ body {
 
   .header-board-name {
     font-size: 1.25rem;
+  }
+  .mobile-menu-btn {
+    display:block;
+    width:32px;
+    height:32px;
+  }
+  .favicon-mobile-img img{
+    display:block;
+    width:32px;
+    height:32px;
   }
 
   #add-task-btn {

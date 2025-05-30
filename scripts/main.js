@@ -75,26 +75,7 @@ const initApp = async () => {
     closeDialog();
   });
   //sidebar logic
-  //   if (collapseSidebarBtn) {
-  //     collapseSidebarBtn.addEventListener("click", () => {
-  //       sidebar.classList.toggle("hidden-sidebar");
-  //       layout.classList.toggle("full-width-layout");
-  //     });
-  //   }
 
-  //   const showSidebarBtn = document.getElementById("show-sidebar-btn");
-
-  //   collapseSidebarBtn.addEventListener("click", () => {
-  //     sidebar.classList.add("hidden-sidebar");
-  //     layout.classList.add("full-width-layout");
-  //     showSidebarBtn.classList.add("visible");
-  //   });
-
-  //   showSidebarBtn.addEventListener("click", () => {
-  //     sidebar.classList.remove("hidden-sidebar");
-  //     layout.classList.remove("full-width-layout");
-  //     showSidebarBtn.classList.remove("visible");
-  //   });
   if (collapseSidebarBtn && showSidebarBtn && sidebar && layout) {
     collapseSidebarBtn.addEventListener("click", () => {
       sidebar.classList.add("hidden-sidebar");
