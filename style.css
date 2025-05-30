@@ -768,3 +768,21 @@ body {
 .show-sidebar-btn.visible {
   display: block;
 }
+/* =============dark-theme ============= */
+body.dark-mode{
+  background-color: #2b2c37;
+  color: #fff;
+}
+.dark-mode .side-bar {
+  background-color: #3e3f4e;
+  border-right-color: #4e4f5e;
+}
+.dark-mode .sticky-header {
+  background-color: #3e3f4e;
+  border-bottom-color: #4e4f5e;
+  color:#fff;
+}
+.dark-mode .task-div {
+  background-color: #3e3f4e;
+  color: #fff;
+}
