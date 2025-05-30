@@ -20,6 +20,9 @@
 
   <body>
     <!-- Navigation Sidebar: Contains the logo, navigation links for boards -->
+    <button type="button" id="mobile-close-btn" class="mobile-close-btn">
+      &times;
+    </button>
     <nav class="side-bar" id="side-bar-div">
       <div id="side-logo-div">
         <img id="logo" src="./assets/logo-light.svg" alt="logo-white" />
@@ -28,6 +31,14 @@
       <div class="boards-nav-links-div" id="boards-nav-links-div">
         <h4 id="headline-sidepanel">ALL BOARDS (1)</h4>
         <button type="button" class="board-btn active">Launch Career</button>
+      </div>
+      <div class="theme-toggle">
+        🌞
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle">
+          <span class="slider round"></span>
+        </label>
+        🌑
       </div>
       <button type="button" id="collapse-sidebar-btn" class="collapse-btn">
         <span
