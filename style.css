@@ -624,22 +624,30 @@ body {
     transition: opacity 0.3s;
   }
   .sidebar-overlay.active {
-    display: block;
-    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff; /* Add background color to overlay */
   }
   .side-bar.mobile-sidebar-active {
     display: block;
-    margin-top:3rem;
-    margin-left:3rem;
+    margin-top:3.9rem;
+    margin-left:3.5rem;
     padding:2rem 2rem;
-    width:50vw;
-    height:40vh;
+    width:50%;
+    height:30vh;
     border-radius:20px;
-    background-color:#fff;
+    background-color: #fff !important; /* Ensure distinct background color */
+    z-index: 2000; /* Ensure it appears above the overlay */
   }
   .mobile-sidebar-active{
-    display:block;
     background-color:#fff;
+  }
+  .sticky-header{
+    width:100%;
+    position:fixed;
+    background-color:#fff;
+    z-index:2000;
   }
   .mobile-sidebar-active
   .sticky-header {
@@ -659,6 +667,9 @@ body {
     width:32px;
     height:32px;
   }
+  .collapse-btn{
+    display:none;
+  }
 
   #add-task-btn {
     padding: 0.625rem 1.125rem;
@@ -674,6 +685,10 @@ body {
 
   .container {
     padding: 1rem;
+  }
+  .container.mobile-sidebar-active {
+    opacity: 0.5;
+    background-color: #fff;
   }
 
   .card-column-main {
